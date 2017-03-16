@@ -6,10 +6,6 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.util.Log;
 
-/**
- * Created by quadandroid-1 on 15/3/17.
- */
-
 public class NetworkStatusBroadcaster extends BroadcastReceiver {
     INetworkChangeListener callback;
 

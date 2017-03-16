@@ -17,10 +17,6 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by quadandroid-1 on 15/3/17.
- */
-
 public class Request implements Response.ErrorListener, Response.Listener<JSONObject> {
 
     private static final int DEFAULT_METHOD = 0;
@@ -50,7 +46,7 @@ public class Request implements Response.ErrorListener, Response.Listener<JSONOb
 
         loadingMessage = DEFAULT_LOADING_MESSAGE;
         shouldShowProgressDialog = DEFAULT_SHOULD_SHOW_DIALOG;
-        headers.put("Content-Type", "application/x-www-form-urlencoded");
+        
     }
 
     public Request(Context context, String toUrl, JSONObject requestData, Class responseClass, IResponseCallback callback) {

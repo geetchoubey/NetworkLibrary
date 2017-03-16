@@ -2,6 +2,8 @@ package com.networklibrary;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.view.Window;
+import android.widget.TextView;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Response;
@@ -70,7 +72,10 @@ public class Request implements Response.ErrorListener, Response.Listener<JSONOb
         if (!shouldShowProgressDialog)
             return;
         dialog = new Dialog(context);
-        dialog.setTitle(loadingMessage);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.dialog_layout);
+        TextView dialogText = (TextView) dialog.findViewById(R.id.dialog_tv);
+        dialogText.setText(loadingMessage);
         dialog.setCancelable(false);
         dialog.show();
     }

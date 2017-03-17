@@ -12,7 +12,7 @@ public class NetworkStatusBroadcaster extends BroadcastReceiver {
     public NetworkStatusBroadcaster() {
     }
 
-    public NetworkStatusBroadcaster(INetworkChangeListener callback) {
+    public void setCallback(INetworkChangeListener callback) {
         this.callback = callback;
     }
 
